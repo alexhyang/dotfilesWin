@@ -9,6 +9,11 @@ gitpull () {
   fi
 }
 
+add_alias () {
+  echo "alias $1=\"$2\"" >> ~/.bash_aliases
+  backupdate_dotfile .bash_aliases
+}
+
 create_dotfile () {
   # create local config files
   echo; echo "Creating $2 config file...";
