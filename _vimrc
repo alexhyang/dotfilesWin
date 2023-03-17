@@ -38,7 +38,7 @@ if has('gui_running')
 else
     set background=dark
 endif
-colorscheme solarized
+
 
 " disable audible bell
 set noerrorbells visualbell t_vb=
@@ -129,6 +129,10 @@ filetype plugin indent on    " required
 " ===================================================
 "          plugin configuration 
 " ===================================================
+" --------------------------------
+" plugin: Solarized
+" --------------------------------
+colorscheme solarized
 
 " --------------------------------
 " plugin: NERDTree

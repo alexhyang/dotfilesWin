@@ -12,7 +12,7 @@ gitpull () {
 create_dotfile () {
   # create local config files
   echo; echo "Creating $2 config file...";
-  cp ~/.dotfiles/config/$1 ~/$1
+  cp ~/.dotfiles/$1 ~/$1
   echo "~/$1 created!"
 }
 
@@ -24,11 +24,11 @@ create_unique_local_dotfile () {
 
 update_dotfile () {
   # overwrite local config with remote config
-  if ! diff ~/$1 ~/.dotfiles/config/$1; then
-    echo "~/.dotfiles/config/$1 --> ~/$1? [y/n]"
-    read confirmation
+  if ! diff ~/$1 ~/.dotfiles/$1; then
+    echo "~/.dotfiles/$1 --> ~/$1? [y/n]"
+    read confirmation;
     if [ $confirmation = 'y' ]; then
-      cp ~/.dotfiles/config/$1 ~/$1
+      cp ~/.dotfiles/$1 ~/$1
       echo "~/$1 updated!\n"
     else
       echo "overwrite ~/$1 cancelled"
@@ -38,14 +38,14 @@ update_dotfile () {
 
 backupdate_dotfile () {
   # overwrite remote config with local config
-  if ! diff ~/.dotfiles/config/$1 ~/$1 ; then
-    echo "~/$1 --> ~/.dotfiles/config/$1? [y/n]"
-    read confirmation
+  if ! diff ~/.dotfiles/$1 ~/$1 ; then
+    echo "~/$1 --> ~/.dotfiles/$1? [y/n]"
+    read confirmation;
     if [ $confirmation = 'y' ]; then
-      cp ~/$1 ~/.dotfiles/config/$1
-      echo "~/.dotfiles/config/$1 updated!\n"
+      cp ~/$1 ~/.dotfiles/$1
+      echo "~/.dotfiles/$1 updated!\n"
     else
-      echo "overwrite ~/.dotfiles/config/$1 cancelled"
+      echo "overwrite ~/.dotfiles/$1 cancelled"
     fi
   fi
 }
