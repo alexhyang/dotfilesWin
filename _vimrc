@@ -21,9 +21,9 @@ nnoremap <F3> :noh<CR>
 nmap Q <Nop>
 
 " tab size, use spaces for tabs, code indentation size
-set tabstop=2
+set tabstop=4
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 
 " add mouse support
 set mouse=n
@@ -32,6 +32,7 @@ set mouse=n
 set backspace=indent,eol,start
 
 " set background and colorscheme
+set guifont=Consolas:h16
 if has('gui_running')
     set background=light
 else
@@ -66,8 +67,9 @@ set wrap linebreak
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set shellslash
+set rtp+=~/vimfiles/bundle/Vundle.vim
+call vundle#begin('~/vimfiles/bundle')
 
 " ===================================================
 "         Vim Plugins from VimAwesome
@@ -79,9 +81,9 @@ Plugin 'scrooloose/nerdtree' " nerd tree -- tree explore plugin for vim
 Plugin 'altercation/vim-colors-solarized' " vim colors solarized: -- precision color scheme for vim editor
 Plugin 'vim-airline/vim-airline' " vim airline -- status/tabline for vim
 Plugin 'airblade/vim-gitgutter' " vim gitgutter -- shows git diff markers
-Plugin 'majutsushi/tagbar' " tagbar -- show outline/structure of classes, functions, etc.
+" Plugin 'majutsushi/tagbar' " tagbar -- show outline/structure of classes, functions, etc.
 Plugin 'tpope/vim-surround' " surroudn.vim -- easy operations on surroundings in pairs
-Plugin 'valloric/youcompleteme' " youcompleteme -- code completion engine for vim
+" Plugin 'valloric/youcompleteme' " youcompleteme -- code completion engine for vim
 Plugin 'scrooloose/syntastic' " Syntastic -- syntax checking hacks for vim
 Plugin 'mxw/vim-jsx' " vim jsx -- React JSX syntax highlighting and indenting
 Plugin 'jelera/vim-javascript-syntax' " Enhanced JavaScript syntax
