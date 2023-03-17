@@ -62,5 +62,9 @@ alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 alias ga='git add'
 alias gcmsg='git commit -m'
 alias gf='git fetch'
+alias ..="cd .."
+alias ~="cd ~"
+alias dotfiles="cd ~/.dotfiles"
+alias dotutils="source ~/.dotfiles/utils.sh"
 
 export TERM="screen"
