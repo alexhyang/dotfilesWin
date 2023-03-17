@@ -1,3 +1,4 @@
+#!/bin/bash
 gitpull () {
   if [[ $(pwd) = $1 ]]; then
     git pull
