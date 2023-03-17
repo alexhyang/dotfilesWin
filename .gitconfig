@@ -1,0 +1,6 @@
+[user]
+	name = Alex Yang
+	email = alex.hyang.dev@gmail.com
+[core]
+	pager = less
+	autocrlf = true
