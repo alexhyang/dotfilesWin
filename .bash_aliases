@@ -1,4 +1,7 @@
 #!/bin/bash
+# shell
+alias bsrc="vim ~/.bashrc"
+alias bsal="vim ~/.bash_aliases"
 
 # git
 alias gsb='git status -sb'
@@ -18,5 +21,11 @@ alias ..="cd .."
 alias ~="cd ~"
 alias dotfiles="cd ~/.dotfiles"
 alias dotutils="source ~/.dotfiles/utils.sh"
-alias cs61b="cd ~/cs61b"
 alias reload="source ~/.bashrc"
+cs61b () {
+    if [[ $1 == "" ]]; then
+      cd ~/dev/cs61b || mkdir ~/dev/cs61b; cd ~/dev/cs61b;
+    else
+      cd "~/dev/cs61b/$1";
+    fi
+} 
