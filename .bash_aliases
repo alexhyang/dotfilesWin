@@ -2,6 +2,9 @@
 # shell
 alias bsrc="vim ~/.bashrc"
 alias bsal="vim ~/.bash_aliases"
+alias cls="clear"
+alias mv="mv -i"
+alias cpi="cp -i"
 
 # git
 alias gsb='git status -sb'
