@@ -22,8 +22,12 @@ map <F6> :so ~/.ideavimrc<CR>
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 
-" Do incremental searching.
-set incsearch
+" set up searching
+set ignorecase          " ignore case
+set smartcase           " no ignore for uppercase
+set incsearch           " search as you type
+set hlsearch            " search highlights
+nnoremap <F3> :noh<CR>  " stop highlighting
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
