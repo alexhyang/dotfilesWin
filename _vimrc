@@ -21,9 +21,9 @@ nnoremap <F3> :noh<CR>
 nmap Q <Nop>
 
 " tab size, use spaces for tabs, code indentation size
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 
 " add mouse support
 set mouse=n
