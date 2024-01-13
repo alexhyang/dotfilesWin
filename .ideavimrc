@@ -7,7 +7,6 @@ set number relativenumber
 "         Key mappings
 " =====================================
 
-
 " change <leader> key to space
 nnoremap <Space> <Nop>
 let mapleader = " "
@@ -32,19 +31,20 @@ nnoremap <F3> :noh<CR>  " stop highlighting
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4c
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
-
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
-
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-
-
+" =====================================
+"         IDE actions
+" =====================================
+" https://github.com/JetBrains/ideavim#executing-ide-actions
 " Find more examples here: https://jb.gg/share-ideavimrc
+" use :actionlist to fetch all IDE actions
+
+" Reformat Code action
+map <leader>r <Action>(ReformatCode)
+" toggle the breakpoint on the current line
+map <leader>b <Action>(ToggleLineBreakpoint)
+" start debug
+map <leader>d <Action>(Debug)
+
 
 " =====================================
 "         Plugins
