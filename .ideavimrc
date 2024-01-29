@@ -26,7 +26,8 @@ set ignorecase          " ignore case
 set smartcase           " no ignore for uppercase
 set incsearch           " search as you type
 set hlsearch            " search highlights
-nnoremap <F3> :noh<CR>  " stop highlighting
+" stop highlighting
+nnoremap <F3> :noh<CR>
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -37,14 +38,14 @@ map Q gq
 " https://github.com/JetBrains/ideavim#executing-ide-actions
 " Find more examples here: https://jb.gg/share-ideavimrc
 " use :actionlist to fetch all IDE actions
+" use `track action Ids` in "Search Everywhere" to find the action id
 
-" Reformat Code action
+" Reformat Code action (IDE shortcut: ctrl + alt + Enter)
 map <leader>r <Action>(ReformatCode)
 " toggle the breakpoint on the current line
 map <leader>b <Action>(ToggleLineBreakpoint)
-" start debug
+" start debugging
 map <leader>d <Action>(Debug)
-
 
 " =====================================
 "         Plugins
@@ -65,4 +66,14 @@ Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 nmap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
+
+" =====================================
+"       Tips for IntelliJ IDEA
+" =====================================
+
+" Useful shortcuts (Windows)
+" ctrl + shift + alt + s    // open project structure
+" ctrl + shift + a          // search actions
+" f12                       // declarations or usages
+" ctrl + alt + f            // open structure panel on the left
+" ctrl + alt + 1            // open terminal
