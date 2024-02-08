@@ -47,6 +47,14 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 " start debugging
 map <leader>d <Action>(Debug)
 
+" folding
+map za <Action>(ExpandRegion)
+map zA <Action>(ExpandRegionRecursively)
+map zR <Action>(ExpandAllRegions)
+map zc <Action>(CollapseRegion)
+map zC <Action>(CollapseRegionRecursively)
+map zM <Action>(CollapseAllRegions)
+
 " =====================================
 "         Plugins
 " =====================================
