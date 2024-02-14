@@ -8,18 +8,17 @@ set number relativenumber
 " // column width visual guide
 " Settings -> Code Style -> General -> visual guides: 80, 120
 
-" Useful shortcuts (Windows)
+" ---- Project Management ----
 " ctrl + alt + s            // open settings
 " ctrl + shift + alt + s    // open project structure
 " ctrl + shift + a          // search actions
 
+" ---- Coding ----
 " ctrl + alt + l            // open project panel
 " ctrl + alt + f            // open structure panel on the left
 " ctrl + alt + 1            // open terminal
 " f12                       // declarations or usages
 " alt + shift + f12         // show usages of a class
-
-"" Source your .vimrc
 
 " =====================================
 "         Key mappings
