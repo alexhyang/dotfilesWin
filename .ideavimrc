@@ -1,6 +1,24 @@
 set ideajoin
 set number relativenumber
 
+" =====================================
+"       Tips for IntelliJ IDEA
+" =====================================
+" IntelliJ set-up
+" // column width visual guide
+" Settings -> Code Style -> General -> visual guides: 80, 120
+
+" Useful shortcuts (Windows)
+" ctrl + alt + s            // open settings
+" ctrl + shift + alt + s    // open project structure
+" ctrl + shift + a          // search actions
+
+" ctrl + alt + l            // open project panel
+" ctrl + alt + f            // open structure panel on the left
+" ctrl + alt + 1            // open terminal
+" f12                       // declarations or usages
+" alt + shift + f12         // show usages of a class
+
 "" Source your .vimrc
 
 " =====================================
@@ -69,19 +87,8 @@ Plug 'tpope/vim-surround'
 "     {Visual}gc
 Plug 'tpope/vim-commentary'
 
-
 " https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 Plug 'preservim/nerdtree'
 nmap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeMapActivateNode='l'
 
-" =====================================
-"       Tips for IntelliJ IDEA
-" =====================================
-
-" Useful shortcuts (Windows)
-" ctrl + shift + alt + s    // open project structure
-" ctrl + shift + a          // search actions
-" f12                       // declarations or usages
-" ctrl + alt + f            // open structure panel on the left
-" ctrl + alt + 1            // open terminal
