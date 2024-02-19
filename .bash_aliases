@@ -14,11 +14,15 @@ alias gl='git pull'
 alias gco='git checkout'
 alias gd='git diff'
 alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias glol5="glol -n 5"
 alias glols="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat"
+alias glols5="glols -n 5"
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
+alias glola5="glola -n 5"
 alias ga='git add'
 alias gcmsg='git commit -m'
 alias gf='git fetch'
+alias gm="git merge"
 
 # directory
 alias ..="cd .."
