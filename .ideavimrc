@@ -9,16 +9,24 @@ set number relativenumber
 " Settings -> Code Style -> General -> visual guides: 80, 120
 
 " ---- Project Management ----
-" ctrl + alt + s            // open settings
+" keymappings not affected by the choice of keymap (Windows, VSCode, etc.)
+" ctrl + ,                  // open settings
 " ctrl + shift + alt + s    // open project structure
 " ctrl + shift + a          // search actions
 
 " ---- Coding ----
-" ctrl + alt + l            // open project panel
-" ctrl + alt + f            // open structure panel on the left
-" ctrl + alt + 1            // open terminal
+" keymappings WILL be affected by the choice of keymap
+" VSCode keymap:
+" ctrl + alt + e            // open project panel
+" alt + 7                   // open structure panel on the left
+" ctrl + `                  // open terminal
 " f12                       // declarations or usages
-" alt + shift + f12         // show usages of a class
+
+" ---- Vim Macro ----
+" -- Markdown --
+" add ordered list: @o
+" add unordered list: @u
+
 
 " =====================================
 "         Key mappings
