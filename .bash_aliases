@@ -23,6 +23,11 @@ alias ga='git add'
 alias gcmsg='git commit -m'
 alias gf='git fetch'
 alias gm="git merge"
+alias gsta="git stash push"
+alias gstaa="git statsh apply"
+alias gstd="git stash drop"
+alias gsave="gsta"
+alias gload="gstaa; gstd"
 
 # directory
 alias ..="cd .."
@@ -31,3 +36,8 @@ alias .files="cd ~/.dotfiles"
 alias .utils="source ~/.dotfiles/utils.sh"
 alias rld="source ~/.bashrc"
 alias dev="cd ~/dev"
+alias proj="cd ~/IdeaProjects/Labs/project_j3l1b/src/main"
+alias projmd="cd ~/IdeaProjects/Labs/project_j3l1b/src/main/model"
+alias projui="cd ~/IdeaProjects/Labs/project_j3l1b/src/main/ui"
+alias projjar="cd ~/IdeaProjects/Labs/project_j3l1b/out/artifacts/Project_Starter_jar"
+alias jar="java -jar"
