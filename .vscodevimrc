@@ -1,0 +1,35 @@
+" =====================================
+"         Common Vim settings
+" =====================================
+
+" line numbers:
+" set number
+" set relativenumber
+
+" search case sensitivity
+set ignorecase   " case-insensitive during string search
+set smartcase    " case-sensitive when Capital letters appear
+
+" enable searching as you type, enable search highlights
+set incsearch
+set hlsearch
+nnoremap <F3> :noh<CR>
+
+" unbind some useless default key bindings
+" 'Q' in normal mode enters Ex mode
+nmap Q <Nop>
+
+" change backspace behavior
+set backspace=indent,eol,start
+
+" disallow arrow keys in normal mode and insert mode
+" normal mode
+nnoremap <Left>  : echoe "Use h"<CR>
+" nnoremap <Right> : echoe "Use l"<CR>
+nnoremap <Up>    : echoe "Use k"<CR>
+nnoremap <Down>  : echoe "Use j"<CR>
+" insert mode
+inoremap <Left>  <ESC>: echoe "Use h"<CR>
+inoremap <Right> <ESC>: echoe "Use l"<CR>
+inoremap <Up>    <ESC>: echoe "Use k"<CR>
+inoremap <Down>  <ESC>: echoe "Use j"<CR>

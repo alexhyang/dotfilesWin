@@ -1,0 +1,85 @@
+{
+  // test symlink
+  // ui and terminal
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.startupEditor": "none",
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#D0D0D0",
+    "terminalCursor.background": "#D0D0D0",
+    "terminalCursor.foreground": "#D0D0D0",
+    "terminal.ansiBlack": "#151515",
+    "terminal.ansiBlue": "#3777E6",
+    "terminal.ansiBrightBlack": "#505050",
+    "terminal.ansiBrightBlue": "#3777E6",
+    "terminal.ansiBrightCyan": "#1FAAAA",
+    "terminal.ansiBrightGreen": "#00C918",
+    "terminal.ansiBrightMagenta": "#AD00A1",
+    "terminal.ansiBrightRed": "#FF0086",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiBrightYellow": "#ABA800",
+    "terminal.ansiCyan": "#1FAAAA",
+    "terminal.ansiGreen": "#00C918",
+    "terminal.ansiMagenta": "#AD00A1",
+    "terminal.ansiRed": "#FF0086",
+    "terminal.ansiWhite": "#D0D0D0",
+    "terminal.ansiYellow": "#ABA800"
+  },
+  // editor
+  "editor.fontSize": 18,
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  "editor.rulers": [78, 80, 120],
+  // tools
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "prettier.prettierPath": "\\AppData\\Roaming\\npm\\node_modules\\prettier",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true
+  },
+  "redhat.telemetry.enabled": true,
+  // programming language
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "default": true,
+    "heading-style": { "style": "atx" },
+    "ul-indent": { "indent": 4 },
+    "list-marker-space": {
+      "ol_multi": 2,
+      "ol_single": 2,
+      "ul_multi": 3,
+      "ul_single": 3
+    },
+    "no-hard-tabs": false,
+    "no-duplicate-heading": {
+      "siblings_only": true
+    },
+    "no-multiple-space-blockquote": false
+  },
+  "workbench.colorTheme": "GitHub Dark",
+  "files.trimTrailingWhitespace": true,
+  "cSpell.userWords": ["Meslo"],
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "$HOME/.vscodevimrc",
+  "vim.digraphs": {
+
+  }
+}
