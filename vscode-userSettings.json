@@ -1,5 +1,4 @@
 {
-  // test symlink
   // ui and terminal
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "MesloLGS NF",
@@ -79,7 +78,7 @@
   },
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "$HOME/.vscodevimrc",
-  "vim.digraphs": {
-
-  }
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+  "vim.smartRelativeLine": true
 }

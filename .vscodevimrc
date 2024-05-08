@@ -33,3 +33,102 @@ inoremap <Left>  <ESC>: echoe "Use h"<CR>
 inoremap <Right> <ESC>: echoe "Use l"<CR>
 inoremap <Up>    <ESC>: echoe "Use k"<CR>
 inoremap <Down>  <ESC>: echoe "Use j"<CR>
+
+
+"""" Move selected region up/down
+""vnoremap J :action MoveStatementDown<CR>
+""vnoremap K :action MoveStatementUp<CR>
+""
+"""" Refactor
+""nnoremap <leader>rc :action ReformatCode<CR>
+""vnoremap <leader>rc :action ReformatCode<CR>
+""nnoremap <leader>rw :action RenameElement<CR>
+""
+"""" Quick fix hot keys
+""nnoremap <C-k> :action GotoPreviousError<CR>
+""nnoremap <C-j> :action GotoNextError<CR>
+""
+""
+"""" Toggle IDE window configurations
+""nnoremap <leader>h :action HideAllWindows<CR>
+""nnoremap <leader>H :action ToggleDistractionFreeMode<CR>
+""nnoremap <leader>l :action ChangeToolWindowLayout<CR>
+""nnoremap <leader>L :action StoreNewLayout<CR>
+""nnoremap <leader>e :action CloseAllEditorsButActive<CR>
+""nnoremap <leader>- :action ToggleZenMode<CR>
+""nnoremap <leader>_ :action TogglePresentationMode<CR>
+""
+"""" Files
+"""" project files
+""nnoremap <leader>fs :action GotoFile<CR>
+"""" *any* file
+""nnoremap <leader>fo :action OpenFile<CR>
+""nnoremap <leader>fr :action RenameFile<CR>
+""nnoremap <leader>fn :action NewFile<CR>
+""nnoremap <leader>fp :action SelectInProjectView<CR>
+""nnoremap <leader>? :action RecentFiles<CR>
+""nnoremap <leader><space> :action RecentFiles<CR>
+""
+"""" Editors/Windows
+""nnoremap <C-w><C-q> :action CloseEditor<CR>
+""nnoremap <C-w>q :action CloseEditor<CR>
+""nnoremap <C-w>H :action MoveEditorToOppositeTabGroup<CR>
+""nnoremap <C-w>J :action MoveEditorToOppositeTabGroup<CR>
+""nnoremap <C-w>K :action MoveEditorToOppositeTabGroup<CR>
+""nnoremap <C-w>L :action MoveEditorToOppositeTabGroup<CR>
+""nnoremap <C-w>V :action MoveTabRight<CR>
+""nnoremap <C-w>S :action MoveTabDown<CR>
+""nnoremap <C-=> :action EditorIncreaseFontSize<CR>
+""nnoremap <C--> :action EditorDecreaseFontSize<CR>
+""
+"""" Regions
+""nnoremap zc :action CollapseRegion<CR>
+""nnoremap zC :action CollapseAllRegions<CR>
+""nnoremap zo :action ExpandRegion<CR>
+""nnoremap zO :action ExpandAllRegions<CR>
+""nnoremap za :action CollapseSelection<CR>
+""
+"""" Search
+""nnoremap <leader>sg :action SearchEverywhere<CR>
+""nnoremap <leader>su :action FindUsages<CR>
+""nnoremap n nzz:action ExpandRegion<CR>
+""nnoremap N Nzz:action ExpandRegion<CR>
+""nnoremap <leader>sw :action CheckinProject<CR>
+""
+"""" Comments
+""nnoremap <C-/> :action CommentByLineComment<CR>
+""vnoremap <C-/> :action CommentByLineComment<CR>
+""nnoremap <leader><C-/> :action CommentByBlockComment<CR>
+""vnoremap <leader><C-/> :action CommentByBlockComment<CR>
+""
+"""" Multiple cursors (requires visual-line mode)
+""vnoremap <leader>I :action EditorAddCaretPerSelectedLine<CR>
+""vnoremap <leader>A :action EditorAddCaretPerSelectedLine<CR>
+""
+"""" Seems redundant, but used to exit multiple cursors
+""noremap <C-[> <ESC>
+""
+"""" Build, Run, Debug
+""nnoremap <leader>bb :action MakeGradleProject<CR>
+""nnoremap <leader>br :action RebuildGradleProject<CR>
+""nnoremap <leader>bc :action CleanGradleProject<CR>
+""nnoremap <leader>rr :action Run<CR>
+""nnoremap <leader>rd :action Debug<CR>
+""nnoremap <leader>rc :action Resume<CR>
+""nnoremap <leader>rs :action Stop<CR>
+""nnoremap <leader>rad :action XDebugger.AttachToProcess<CR>
+""nnoremap \\b :action ToggleLineBreakpoint<CR>
+""
+"""" Changelist
+""nnoremap g; :action JumpToLastChange<CR>
+""nnoremap g, :action JumpToNextChange<CR>
+""
+""Plug 'machakann/vim-highlightedyank'
+
+" Standard Keymaps
+" ctrl+` for changing viewing modes
+"
+" Notes
+" list of IntelliJ actions can be viewed with command :actionlist
+" Tool windows can be opened through RecentFiles, or ctrl+tab
+" set "left margin to distraction free mode" to 0
