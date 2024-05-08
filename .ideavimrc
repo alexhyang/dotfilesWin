@@ -21,11 +21,16 @@ set number relativenumber
 " alt + 7                   // open structure panel on the left
 " ctrl + `                  // open terminal
 " f12                       // declarations or usages
+" ctrl + alt + m            // extract method
 
 " ---- Vim Macro ----
 " -- Markdown --
 " add ordered list: @o
 " add unordered list: @u
+
+" ---- Useful Settings ----
+" Enable softwrap for *.md and *.txt files
+"     File -> Settings -> Editor -> General
 
 
 " =====================================
