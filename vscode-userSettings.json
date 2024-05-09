@@ -68,7 +68,10 @@
     "no-duplicate-heading": {
       "siblings_only": true
     },
-    "no-multiple-space-blockquote": false
+    "no-multiple-space-blockquote": false,
+    "no-inline-html": {
+      "allowed_elements": ["img"]
+    }
   },
   "workbench.colorTheme": "GitHub Dark",
   "files.trimTrailingWhitespace": true,
