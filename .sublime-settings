@@ -1,0 +1,18 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"font_size": 14,
+	"highlight_line": true,
+	"rulers": [78, 80],
+	"word_wrap": true,
+	"wrap_width": 80,
+	"vintage_start_in_command_mode": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"neovintageous_build_version": 13200,
+	"index_files": true,
+	"spell_check": true,
+	"translate_tabs_to_spaces": true,
+}
