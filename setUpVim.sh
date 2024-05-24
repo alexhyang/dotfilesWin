@@ -1,6 +1,16 @@
 #!/bin/bash
 echo "Setting up Vim...";
-source ./utils.sh
+
+# Git
+gitpull () {
+  if [[ $(pwd) = $1 ]]; then
+    git pull
+  else
+    pushd $1
+    git pull
+    popd
+  fi
+}
 
 if [ ! -d "$HOME/vimfiles/bundle/Vundle.vim" ]
 then
