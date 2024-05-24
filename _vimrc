@@ -1,7 +1,9 @@
+" This is the config file for vim and gVim on Window OS
+
 " =====================================
-"         Common Vim settings 
+"         Common Vim settings
 " =====================================
-syntax on 
+syntax on
 
 " line numbers:
 set number
@@ -12,7 +14,7 @@ set ignorecase   " case-insensitive during string search
 set smartcase    " case-sensitive when Capital letters appear
 
 " enable searching as you type, enable search highlights
-set incsearch 
+set incsearch
 set hlsearch
 nnoremap <F3> :noh<CR>
 
@@ -110,7 +112,7 @@ call vundle#end()            " required
 "   (enable loading the indent file for specific file types)
 filetype plugin indent on    " required
 
-" filetype plugin on 
+" filetype plugin on
 "   (enable loading the plugin files for specific file types)
 " required by:
 "   markdown-syntax:
@@ -127,7 +129,7 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " ===================================================
-"          plugin configuration 
+"          plugin configuration
 " ===================================================
 " --------------------------------
 " plugin: Solarized
