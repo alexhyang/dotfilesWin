@@ -5,7 +5,7 @@ REM Set the source directory to the current directory of the batch file
 REM change the obsidian vault destination if necessary
 
 set "obDst=%USERPROFILE%\OneDrive\Files\0-Personal_Management\Obsidian\Alex-2024"
-set "dotfilesDir=%homeDir%\.dotfiles"
+set "dotfilesDir=%USERPROFILE%\.dotfiles"
 REM set "APPDATA=%homeDir%\AppData\Roaming"
 
 REM Create symbolic links for each file
