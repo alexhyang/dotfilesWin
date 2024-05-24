@@ -27,7 +27,7 @@
     "terminal.ansiYellow": "#ABA800"
   },
   // editor
-  "editor.fontSize": 18,
+  "editor.fontSize": 17,
   "editor.tabSize": 2,
   "editor.lineNumbers": "relative",
   "editor.formatOnSave": true,
@@ -73,7 +73,7 @@
       "allowed_elements": ["img"]
     }
   },
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Solarized Dark",
   "files.trimTrailingWhitespace": true,
   "cSpell.userWords": ["Meslo"],
   "[markdown]": {
@@ -83,5 +83,10 @@
   "vim.vimrc.path": "$HOME/.vscodevimrc",
   "vim.leader": "<space>",
   "vim.easymotion": true,
-  "vim.smartRelativeLine": true
+  "vim.smartRelativeLine": true,
+  "files.associations": {
+    ".vscodevimrc": "Vimscript",
+    ".ideavimrc": "Vimscript",
+    "_vimrc": "Vimscript"
+  }
 }
