@@ -9,6 +9,7 @@ set "dotfilesDir=%USERPROFILE%\.dotfiles"
 REM set "APPDATA=%homeDir%\AppData\Roaming"
 
 REM Create symbolic links for each file
+REM mklink <link> <target>
 mklink "%obDst%\.obsidian.vimrc" "%dotfilesDir%\.obsidian.vimrc"
 
 REM Add more lines if you have additional files to link

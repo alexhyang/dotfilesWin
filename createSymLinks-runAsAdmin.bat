@@ -7,6 +7,7 @@ set "dotfilesDir=%homeDir%\.dotfiles"
 REM set "APPDATA=%homeDir%\AppData\Roaming"
 
 REM Create symbolic links for each file
+REM mklink <link> <target>
 mklink "%homeDir%\.bash_aliases" "%dotfilesDir%\.bash_aliases"
 mklink "%homeDir%\.bashrc" "%dotfilesDir%\.bashrc"
 mklink "%homeDir%\.gitconfig" "%dotfilesDir%\.gitconfig"
