@@ -30,12 +30,14 @@
   "editor.fontSize": 17,
   "editor.tabSize": 2,
   "editor.lineNumbers": "relative",
-  "editor.formatOnSave": true,
   "editor.rulers": [78, 80, 120],
+  "explorer.confirmDelete": false,
+  "editor.wordWrapColumn": 120,
+  "editor.wordWrap": "wordWrapColumn",
   // tools
   "git.confirmSync": false,
   "git.autofetch": true,
-  "prettier.prettierPath": "\\AppData\\Roaming\\npm\\node_modules\\prettier",
+  // "prettier.prettierPath": "\\AppData\\Roaming\\npm\\node_modules\\prettier",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": true
   },
@@ -73,7 +75,7 @@
       "allowed_elements": ["img"]
     }
   },
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Dracula",
   "files.trimTrailingWhitespace": true,
   "cSpell.userWords": ["Meslo"],
   "[markdown]": {
