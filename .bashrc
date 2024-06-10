@@ -117,7 +117,6 @@ if ! shopt -oq posix; then
 fi
 
 export TERM="screen"
-source ~/.dotfiles/utils.sh || echo "check util.sh in .dotfiles"
 
 # Customize Prompt String
 export GIT_PS1_SHOWDIRTYSTATE=1
