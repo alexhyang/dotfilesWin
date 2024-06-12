@@ -15,6 +15,7 @@ mklink "%homeDir%\.ideavimrc" "%dotfilesDir%\.ideavimrc"
 mklink "%homeDir%\_vimrc" "%dotfilesDir%\_vimrc"
 mklink "%homeDir%\.vscodevimrc" "%dotfilesDir%\.vscodevimrc"
 mklink "%APPDATA%\Code\User\settings.json" "%dotfilesDir%\vscode-settings.json"
+mklink "%APPDATA%\Code\User\snippets\markdown.json" "%dotfilesDir%\vscode-snippets-markdown.json"
 mklink "%APPDATA%\Sublime Text\Packages\User\Preferences.sublime-settings" "%dotfilesDir%\.sublime-settings"
 
 REM Add more lines if you have additional files to link
