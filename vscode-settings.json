@@ -81,11 +81,25 @@
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
+  // vim
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "$HOME/.vscodevimrc",
   "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.smartRelativeLine": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "q"],
+      "after": [
+        "q", "t", "b", "i", "`", "<Esc>", "e", "a", "`", "<Esc>", "q",
+        "q", "b", "b", "i", "*", "*", "<Esc>", "e", "a", "*", "*", "<Esc>", "q",
+        "q", "i", "b", "i", "*", "<Esc>", "e", "a", "*", "<Esc>", "q",
+        "q", "o", "o", "1", "<Space>", "<Esc>", "q",
+        "q", "u", "o", "<Space>", "<Space>", "<Space>", "<Esc>", "q"
+      ]
+    }
+  ],
+  // others
   "files.associations": {
     ".vscodevimrc": "Vimscript",
     ".ideavimrc": "Vimscript",
