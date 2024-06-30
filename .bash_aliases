@@ -20,6 +20,8 @@ alias glols5="glols -n 5"
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
 alias glola5="glola -n 5"
 alias ga='git add'
+alias gc!='git commit --verbose --amend'
+alias gcn!='git commit --verbose --no-edit --amend'
 alias gcmsg='git commit -m'
 alias gf='git fetch'
 alias gm="git merge"
