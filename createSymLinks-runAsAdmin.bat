@@ -10,6 +10,7 @@ REM Create symbolic links for each file
 REM mklink <link> <target>
 mklink "%homeDir%\.bash_aliases" "%dotfilesDir%\.bash_aliases"
 mklink "%homeDir%\.bashrc" "%dotfilesDir%\.bashrc"
+mklink "%homeDir%\.editorconfig" "%dotfilesDir%\.editorconfig"
 mklink "%homeDir%\.gitconfig" "%dotfilesDir%\.gitconfig"
 mklink "%homeDir%\.ideavimrc" "%dotfilesDir%\.ideavimrc"
 mklink "%homeDir%\_vimrc" "%dotfilesDir%\_vimrc"
