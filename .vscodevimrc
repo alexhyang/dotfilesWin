@@ -22,6 +22,11 @@ nmap Q <Nop>
 " change backspace behavior
 set backspace=indent,eol,start
 
+
+" =====================================
+"         Key mappings
+" =====================================
+
 " disallow arrow keys in normal mode and insert mode
 " normal mode
 nnoremap <Left>  : echoe "Use h"<CR>
@@ -33,7 +38,21 @@ inoremap <Left>  <ESC>: echoe "Use h"<CR>
 inoremap <Right> <ESC>: echoe "Use l"<CR>
 inoremap <Up>    <ESC>: echoe "Use k"<CR>
 inoremap <Down>  <ESC>: echoe "Use j"<CR>
+inoremap jk <ESC>
+inoremap kj <ESC>
 
+" =====================================
+"         Macros
+" =====================================
+" nnoremap <leader>qt qtbi`<Esc>ea`<Esc>q
+" nnoremap <leader>qb qbbi**<Esc>ea**<Esc>q
+" nnoremap <leader>qi qibi*<Esc>ea*<Esc>q
+" nnoremap <leader>qo qoo1<Space><Esc>q
+" nnoremap <leader>qu quo<Space><Space><Space><Esc>q
+" nnoremap <leader>qf <leader>qt<leader>qb<leader>qi
+" nnoremap <leader>ql <leader>qo<leader>qu
+nnoremap <leader>qf oloading<Space>macros<Esc>qtbi`<Esc>ea`<Esc>qqbbi**<Esc>ea**<Esc>qqibi*<Esc>ea*<Esc>qdd
+nnoremap <leader>ql oloading<Space>macros<Esc>qoo1<Space><Esc>qquo<Space><Space><Space><Esc>q
 
 """" Move selected region up/down
 ""vnoremap J :action MoveStatementDown<CR>
