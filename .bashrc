@@ -123,6 +123,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 "(%s)")\$ '
 
 # if __git_ps1 command not found
+# it's because you forget to copy the programmable completion section (line 108-117) as well
+# 
+# An alternative solution is as follows:
 # http://stackoverflow.com/questions/12870928/mac-bash-git-ps1-command-not-found
 # curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 # echo 'source ~/.git-prompt.sh' >> ~/.bashrc

@@ -1,7 +1,7 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"font_size": 14,
+	"font_size": 13,
 	"highlight_line": true,
 	"rulers": [78, 80],
 	"word_wrap": true,
@@ -15,4 +15,11 @@
 	"index_files": true,
 	"spell_check": true,
 	"translate_tabs_to_spaces": true,
+	"added_words":
+	[
+		"Todo's",
+	],
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"vintageous_i_escape_jk": true,
+	"vintageous_i_escape_kj": true
 }

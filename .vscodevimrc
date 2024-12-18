@@ -1,3 +1,10 @@
+" This is the vimrc file for vscode. Make sure
+"     vim.vimrc.enable: true,
+"     vim.vimrc.path: "$HOME/.vscodevimrc",
+"     vim.vimrc.leader: "<Space>",
+"   are configured properly
+"   in vscode-settings.json
+
 " =====================================
 "         Common Vim settings
 " =====================================
