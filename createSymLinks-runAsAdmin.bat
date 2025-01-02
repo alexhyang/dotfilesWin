@@ -20,7 +20,7 @@ mklink "%homeDir%\.vscodevimrc" "%dotfilesDir%\.vscodevimrc"
 mklink "%Romaing%\Code\User\settings.json" "%dotfilesDir%\vscode-settings.json"
 mklink "%Romaing%\Code\User\snippets\markdown.json" "%dotfilesDir%\vscode-snippets-markdown.json"
 mklink "%Romaing%\Sublime Text\Packages\User\Preferences.sublime-settings" "%dotfilesDir%\.sublime-settings"
-mklink "%Local%\nvim\init.vim" "%dotfilesDir%\nvimInit.vim"
+mklink "%Local%\nvim\init.lua" "%dotfilesDir%\nvim\init.lua"
 
 REM Add more lines if you have additional files to link
 

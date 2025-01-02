@@ -4,3 +4,4 @@
 [core]
 	pager = less
 	autocrlf = true
+
