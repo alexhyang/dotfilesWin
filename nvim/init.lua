@@ -177,6 +177,26 @@ require("lazy").setup({
       "lewis6991/gitsigns.nvim",
       opts = {},
     },
+    {
+      "OXY2DEV/markview.nvim",
+      lazy = false, -- Recommended
+      dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+        "nvim-tree/nvim-web-devicons"
+      },
+      opts = {
+        list_items = {
+          enable = false,
+        },
+        code_blocks = {
+          enable = true,
+          style = "minimal",
+          min_width = 40,
+          hl = "MarkviewCode",
+        }
+      }
+
+    },
     -- Editing, Highlighting
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     {
