@@ -1,5 +1,7 @@
 #!/bin/bash
 # shell
+alias nv="nvim"
+alias vim="nvim"
 alias vimrc="vim ~/_vimrc"
 alias bashrc="vim ~/.bashrc"
 alias bashal="vim ~/.bash_aliases"

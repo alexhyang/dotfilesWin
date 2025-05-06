@@ -45,9 +45,10 @@ opt.hlsearch = true
 --         Macros
 -- =====================================
 -- Markdown formatting
-cmd("let @t = \"bi`\\<Esc>ea`\\<Esc>\"")
-cmd("let @b = \"bi**\\<Esc>ea**\\<Esc>\"")
-cmd("let @i = \"bi*\\<Esc>ea*\\<Esc>\"")
+cmd("let @t = \"Bi`\\<Esc>Ea`\\<Esc>\"")
+cmd("let @b = \"Bi**\\<Esc>Ea**\\<Esc>\"")
+cmd("let @i = \"Bi*\\<Esc>Ea*\\<Esc>\"")
+cmd("let @l = \"Bi$\\<Esc>Ea$\\<Esc>\"")
 cmd("let @u = \"o*\\<Space>\\<Space>\\<Space>\"")
 cmd("let @o = \"o1.\\<Space>\\<Space>\"")
 cmd("let @c = \"o```\\<CR>```\\<Esc>kA\"")
@@ -113,11 +114,11 @@ keymap.set("", "<F3>", ":noh<CR>")
 keymap.set("", "<F9>", ":tabedit $HOME/.config/nvim/init.lua<CR>")
 keymap.set("i", "jk", "<Esc>")
 keymap.set("n", "<C-n>", ":tabnew<CR>")
-keymap.set("n", "<leader>bk", ":bn<CR>")
-keymap.set("n", "<leader>bj", ":bp<CR>")
-keymap.set("n", "<leader>bd", ":bd<CR>")
-keymap.set("n", "<leader>bh", ":bf<CR>")
-keymap.set("n", "<leader>bl", ":bl<CR>")
+keymap.set("n", "<leader>gk", ":bn<CR>")
+keymap.set("n", "<leader>gj", ":bp<CR>")
+keymap.set("n", "<leader>gd", ":bd<CR>")
+keymap.set("n", "<leader>gh", ":bf<CR>")
+keymap.set("n", "<leader>gl", ":bl<CR>")
 keymap.set("n", "Q", "<Nop>")
 cmd("noremap <Leader>p :lua vim.lsp.buf.format()<CR>")
 cmd("noremap :Dof :lua vim.diagnostic.disable()<CR>")
@@ -185,15 +186,21 @@ require("lazy").setup({
         "nvim-tree/nvim-web-devicons"
       },
       opts = {
-        list_items = {
-          enable = false,
-        },
         code_blocks = {
           enable = true,
+          icons = "",
           style = "minimal",
           min_width = 40,
           hl = "MarkviewCode",
-        }
+        },
+        headings = {
+          enable = true,
+          heading_1 = { style = "simple" },
+          heading_2 = { style = "simple" },
+          heading_3 = { style = "simple" },
+        },
+        links = { enable = false },
+        list_items = { enable = false },
       }
 
     },
@@ -377,7 +384,7 @@ vim.keymap.set("n", "<F7>", ":NvimTreeToggle<CR>")
 
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
-  ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+  ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "typescript" },
   sync_install = false,
   auto_install = true,
   highlight = {
@@ -415,6 +422,7 @@ vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files'
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'Telescope document symbols' })
 
 -- mason
 require("mason").setup({
@@ -441,6 +449,7 @@ lspconfig.lua_ls.setup({
 lspconfig.ts_ls.setup({
   capabilities = capabilities,
 })
+lspconfig.marksman.setup({});
 lspconfig.rust_analyzer.setup({
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
@@ -450,10 +459,10 @@ lspconfig.rust_analyzer.setup({
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-keymap.set("n", "[d", vim.diagnostic.goto_prev)
-keymap.set("n", "]d", vim.diagnostic.goto_next)
-keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "open diagnostic float" })
+keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "prev diagnostic" })
+keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "next diagnostic" })
+keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "diagnostic setloclist" })
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -565,9 +574,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   virtual_text = false,
 })
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  title = "hover",
-})
+-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+--   title = "hover",
+-- })
 
 
 -- =====================================
@@ -580,48 +589,48 @@ keymap.set("", "<F9>", ":tabedit $HOME\\.dotfiles\\nvim\\init.lua<CR>")
 -- gitsigns complete setup will cause neovim on Windows to freeze when quitting
 -- (COMMENT OUT the following gitsigns setup if using Windows)
 -- require('gitsigns').setup({
-  -- on_attach = function(bufnr)
-    -- local gitsigns = require('gitsigns')
+-- on_attach = function(bufnr)
+-- local gitsigns = require('gitsigns')
 
-    -- local function map(mode, l, r, opts)
-      -- opts = opts or {}
-      -- opts.buffer = bufnr
-      -- vim.keymap.set(mode, l, r, opts)
-    -- end
+-- local function map(mode, l, r, opts)
+-- opts = opts or {}
+-- opts.buffer = bufnr
+-- vim.keymap.set(mode, l, r, opts)
+-- end
 
-    -- -- Navigation
-    -- map('n', ']c', function()
-      -- if vim.wo.diff then
-        -- vim.cmd.normal({ ']c', bang = true })
-      -- else
-        -- gitsigns.nav_hunk('next')
-      -- end
-    -- end)
+-- -- Navigation
+-- map('n', ']c', function()
+-- if vim.wo.diff then
+-- vim.cmd.normal({ ']c', bang = true })
+-- else
+-- gitsigns.nav_hunk('next')
+-- end
+-- end)
 
-    -- map('n', '[c', function()
-      -- if vim.wo.diff then
-        -- vim.cmd.normal({ '[c', bang = true })
-      -- else
-        -- gitsigns.nav_hunk('prev')
-      -- end
-    -- end)
+-- map('n', '[c', function()
+-- if vim.wo.diff then
+-- vim.cmd.normal({ '[c', bang = true })
+-- else
+-- gitsigns.nav_hunk('prev')
+-- end
+-- end)
 
-    -- -- Actions
-    -- map('n', '<leader>hs', gitsigns.stage_hunk)
-    -- map('n', '<leader>hr', gitsigns.reset_hunk)
-    -- map('v', '<leader>hs', function() gitsigns.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
-    -- map('v', '<leader>hr', function() gitsigns.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
-    -- map('n', '<leader>hS', gitsigns.stage_buffer)
-    -- map('n', '<leader>hu', gitsigns.undo_stage_hunk)
-    -- map('n', '<leader>hR', gitsigns.reset_buffer)
-    -- map('n', '<leader>hp', gitsigns.preview_hunk)
-    -- map('n', '<leader>hb', function() gitsigns.blame_line { full = true } end)
-    -- map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
-    -- map('n', '<leader>hd', gitsigns.diffthis)
-    -- map('n', '<leader>hD', function() gitsigns.diffthis('~') end)
-    -- map('n', '<leader>td', gitsigns.toggle_deleted)
+-- -- Actions
+-- map('n', '<leader>hs', gitsigns.stage_hunk)
+-- map('n', '<leader>hr', gitsigns.reset_hunk)
+-- map('v', '<leader>hs', function() gitsigns.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
+-- map('v', '<leader>hr', function() gitsigns.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
+-- map('n', '<leader>hS', gitsigns.stage_buffer)
+-- map('n', '<leader>hu', gitsigns.undo_stage_hunk)
+-- map('n', '<leader>hR', gitsigns.reset_buffer)
+-- map('n', '<leader>hp', gitsigns.preview_hunk)
+-- map('n', '<leader>hb', function() gitsigns.blame_line { full = true } end)
+-- map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
+-- map('n', '<leader>hd', gitsigns.diffthis)
+-- map('n', '<leader>hD', function() gitsigns.diffthis('~') end)
+-- map('n', '<leader>td', gitsigns.toggle_deleted)
 
-    -- -- Text object
-    -- map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
-  -- end
+-- -- Text object
+-- map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+-- end
 -- })
